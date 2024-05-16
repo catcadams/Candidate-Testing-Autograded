@@ -31,12 +31,15 @@ for (i = 0; i < questions.length; i++) {
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-console.log(`\n Thank you for answering my questions. Displayed below are your answers with the correct answer next to it. 
-your answer: ${candidateAnswers[0]} \t correct answer: ${correctAnswers[0]}
-your answer: ${candidateAnswers[1]} \t\t correct answer: ${correctAnswers[1]}
-your answer: ${candidateAnswers[2]} \t\t correct answer: ${correctAnswers[2]}
-your answer: ${candidateAnswers[3]} \t correct answer: ${correctAnswers[3]}
-your answer: ${candidateAnswers[4]} \t\t\t correct answer: ${correctAnswers[4]}`);
+console.log("\n Thank you for answering my questions. Displayed below are your answers with the correct answer below it.")
+for (let i = 0; i < questions.length; i++) {
+  if (candidateAnswers[i] === correctAnswers[i]) {
+    console.log(`\n That's correct! \n Your answer: ${candidateAnswers[i]} \n Correct answer: ${correctAnswers[i]}`);
+  } else {
+    console.log(`\n That's incorrect. \n Your answer: ${candidateAnswers[i]} \n Correct answer: ${correctAnswers[i]}`);
+  }
+}
+
 
 
   let grade;  //TODO 3.2 use this variable to calculate the candidates score.
