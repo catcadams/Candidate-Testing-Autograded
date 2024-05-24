@@ -54,9 +54,9 @@ function gradeQuiz(candidateAnswers) {
   }
   grade = numOfCorrectAnswers / questions.length * 100;
   if (grade > 79) {
-    console.log(`\n Congratulations. You passed the quiz with a ${grade}%`);
+    console.log(`\n Congratulations. You passed the quiz with a ${grade}% (${numOfCorrectAnswers} out of ${questions.length} questions correct)`);
   } else {
-    console.log(`\n You failed. Your score was ${grade}%`);
+    console.log(`\n You failed. Your score was ${grade}% (${numOfCorrectAnswers} out of ${questions.length} questions correct)`);
   }
 
 
